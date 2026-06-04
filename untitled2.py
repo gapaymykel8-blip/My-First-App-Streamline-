@@ -1,10 +1,8 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
+
 from faker import Faker
-
-
-st.title('What will this look like?') 
 
 
 @st.cache_data
