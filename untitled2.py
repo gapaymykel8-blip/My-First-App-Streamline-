@@ -1,11 +1,11 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
+from faker import Faker
 
 
 st.title('What will this look like?') 
 
-from faker import Faker
 
 @st.cache_data
 def get_profile_dataset(number_of_items: int = 20, seed: int = 0) -> pd.DataFrame:
