@@ -64,27 +64,4 @@ edited_dfa = st.data_editor(
 
 st.button("Save", on_click=commit)
 
-import streamlit as st
-import pandas as pd
-
-if'dfa' not in st.session_state:
-    st.session_state['dfa']= pd.DataFrame({"Par":["Apple","Strawberry","Banana"],"Cat1":["good","good","bad"],"Cat2":["healthy","healthy","unhealthy"],'Active':[False,False,False]})
-    st.session_state.rerun = False
-    
-def rerun():
-    st.session_state.rerun = True
-
-name=st.text_input("Search for ...")
-if name == '':
-    st.session_state['dfa'].Active=True
-else:
-    st.session_state['dfa'].Active=False
-    st.session_state['dfa'].loc[st.session_state['dfa']['Par'].str.contains(name,case=False),'Active']=True
-
-active_dfa = st.session_state['dfa'][st.session_state['dfa']['Active']==True].copy()
-edited_dfa = st.data_editor(active_dfa,column_order=['Par','Cat1','Cat2'],on_change=rerun)
-    
-if st.session_state.rerun:
-    st.session_state.rerun = False
-    st.rerun()
 
