@@ -23,5 +23,5 @@ options = st.multiselect(
     [yay],
 )
 
-st.write("Your number is:", options`)
+st.write("Your number is:", options)
 
