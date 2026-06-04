@@ -5,17 +5,17 @@ import streamlit as st
 
 st.title('I have to get this right')
 
-import streamlit as st
-
 @st.cache_data
-def square(x):
-    return x**2
+def foo(bar):
+    time.sleep(2)
+    st.write(f"Executed foo({bar}).")
+    return bar
 
-@st.cache_data
-def cube(x):
-    return x**3
+if st.button("Clear all cached values for `foo`", on_click=foo.clear):
+    foo.clear()
 
-if st.button("Clear All"):
-    # Clear values from *all* all in-memory and on-disk data caches:
-    # i.e. clear values from both square and cube
-    st.cache_data.clear()
+if st.button("Clear the cached value of `foo(1)`"):
+    foo.clear(1)
+
+foo(1)
+foo(2)
