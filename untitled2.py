@@ -69,3 +69,6 @@ print(edited_dfa)
 st.markdown("This can be used at the end to flter out the different telescopes possibly, but ideally we would be able to filter out all the other telescopes we are not concered with before we do the rest of the computations")
 
 
+title = st.text_input("Movie title", "Life of Brian")
+st.write("The current movie title is", title)
+
