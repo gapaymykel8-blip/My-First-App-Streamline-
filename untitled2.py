@@ -66,6 +66,6 @@ st.button("Save", on_click=commit)
 
 print(edited_dfa)
 
-std.markdown("This can be used at the end to flter out the different telescopes possibly, but ideally we would be able to filter out all the other telescopes we are not concered with before we do the rest of the computations")
+st.markdown("This can be used at the end to flter out the different telescopes possibly, but ideally we would be able to filter out all the other telescopes we are not concered with before we do the rest of the computations")
 
 
