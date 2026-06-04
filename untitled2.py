@@ -6,7 +6,7 @@ import time
 
 st.title('I have to get this right')
 
-data = pd.readcsv('Blue Spectra(in).csv')
+data = pd.read_csv('Blue Spectra(in).csv')
 
 @st.cache_data
 def show_data():
