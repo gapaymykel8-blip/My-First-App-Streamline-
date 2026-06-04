@@ -1,15 +1,17 @@
-"""
-# My first app
-Here's our first attempt at using data to create a table:
-"""
-
 import streamlit as st
-import pandas as pd
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
+import numpy as np
 
-df
+st.title('What will this look like?') 
+st.markdown('Suggesting improvements to the streamlit app, that Sir Arcy developed') 
 
-st.markdown('This is a test to see if this will work')
+# Your data array
+cities = np.array(["New York", "London", "Tokyo", "Paris", "Sydney"])
+
+st.title("Fetch Data from an Array")
+
+# User selects an item from the array
+selected_city = st.selectbox("Choose a city:", cities)
+
+# Fetch and use the selected data
+st.write(f"You fetched: **{selected_city}**")
+
