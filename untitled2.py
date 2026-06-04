@@ -1,6 +1,3 @@
-import streamlit as st
-import numpy as np
-
 st.title('What will this look like?') 
 
 import numpy as np
