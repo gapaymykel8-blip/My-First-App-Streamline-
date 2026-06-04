@@ -6,17 +6,14 @@ import time
 
 st.title('I have to get this right')
 
+data = pd.readcsv('Blue Spectra(in).csv')
+
 @st.cache_data
-def foo(bar):
-    time.sleep(2)
-    st.write(f"Executed foo({bar}).")
-    return bar
-
-if st.button("Clear all cached values for `foo`", on_click=foo.clear):
-    foo.clear()
-
-if st.button("Clear the cached value of `foo(1)`"):
-    foo.clear(1)
-
-foo(1)
-foo(2)
+def show_data():
+    st.header("Data analysis")
+    data = api.get(...)
+    st.success("Fetched data from API!")
+    st.write("Here is a plot of the data:")
+    st.line_chart(data)
+    st.write("And here is the raw data:")
+    st.dataframe(data)
