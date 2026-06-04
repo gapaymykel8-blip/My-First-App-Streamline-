@@ -16,6 +16,8 @@ def show_data(data):
 
 yay = show_data(df)
 
+st.markdown("This should say, Cerro:", yay[0,0])
+
 st.markdown("Going to try and make the tables selectable but caching seems to work, with csv files i dont see why it shouldnt work with the code") 
 
 import streamlit as st
