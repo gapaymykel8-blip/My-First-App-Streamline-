@@ -16,4 +16,12 @@ def show_data(data):
 
 yay = show_data(df)
 
+st.markdown("Going to try and make the tables selectable but caching seems to work, with csv files i dont see why it shouldnt work with the code") 
+
+options = st.multiselect(
+    "Pick a Number", 
+    [yay],
+)
+
+st.write("Your number is:", options`)
 
