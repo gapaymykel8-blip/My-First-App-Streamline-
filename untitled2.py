@@ -6,7 +6,7 @@ import time
 
 st.title('I have to get this right')
 
-data = pd.read_csv('Blue Spectra(in).csv')
+df = pd.read_csv('Blue Spectra(in).csv')
 
 @st.cache_data
 def show_data():
@@ -17,3 +17,7 @@ def show_data():
     st.line_chart(data)
     st.write("And here is the raw data:")
     st.dataframe(data)
+
+yay = show_data(df)
+yay
+
