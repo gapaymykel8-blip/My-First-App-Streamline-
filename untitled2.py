@@ -6,7 +6,7 @@ import time
 
 st.title('I have to get this right')
 
-df = pd.read_csv('dummy_data.csv')
+df = pd.read_csv('cumulative_2026.06.04_02.53.36.csv')
 
 @st.cache_data
 def show_data(data):
@@ -15,8 +15,6 @@ def show_data(data):
     st.dataframe(data)
 
 yay = show_data(df)
-
-st.text("This should say, Cerro:", yay['Name'])
 
 st.markdown("Going to try and make the tables selectable but caching seems to work, with csv files i dont see why it shouldnt work with the code") 
 
