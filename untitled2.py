@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+st.title()
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
