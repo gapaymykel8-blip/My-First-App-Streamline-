@@ -64,4 +64,6 @@ edited_dfa = st.data_editor(
 
 st.button("Save", on_click=commit)
 
+print(edited_dfa)
+
 
