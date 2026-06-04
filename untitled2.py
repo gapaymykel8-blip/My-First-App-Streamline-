@@ -25,3 +25,18 @@ df = pd.DataFrame(
 )
 
 st.dataframe(df)
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+import time
+
+df = pd.DataFrame(np.random.randn(15, 3), columns=["A", "B", "C"])
+chart = st.line_chart(df)
+
+for tick in range(10):
+    time.sleep(0.5)
+    new_row = pd.DataFrame(np.random.randn(1, 3), columns=["A", "B", "C"])
+    chart.add_rows(new_row)
+
+st.button("Regenerate")
