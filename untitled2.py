@@ -27,9 +27,6 @@ def show_data(data):
    return filtered_df
 
 yay = load_data()
-show_data(yay)
-
-
 
 st.markdown("Doing the same but for a specific Column Instead lets choose, Locaton") 
 def show_data_loc(data):
