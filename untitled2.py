@@ -24,8 +24,12 @@ def show_data(data):
    st.write(f"Showing {len(filtered_df)} of {len(data)} rows")
    st.dataframe(filtered_df) 
 
+   return filtered_df
+
 yay = load_data()
 show_data(yay)
+
+
 
 st.markdown("Doing the same but for a specific Column Instead lets choose, Locaton") 
 def show_data_loc(data):
@@ -38,9 +42,14 @@ def show_data_loc(data):
    filtered_df = filtered_df[filtered_df['Location'].isin(selected_locations)]
 
    st.write(f"Showing {len(filtered_df)} of {len(data)} rows")
-   st.dataframe(filtered_df) 
+   st.dataframe(filtered_df)
+
+   return filtered_df
 
 show_data_loc(yay)
+
+filtered_yay = show_data_loc(yay)
+st.write(filtered_yay.describe())
 
 
 
