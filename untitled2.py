@@ -45,8 +45,6 @@ def show_data_loc(data):
 
 filtered_yay = show_data_loc(yay)
 
-filtered_yay = show_data_loc(yay)
-
 # Some examples of what you can now do with it:
 
 # Summary statistics of filtered data
