@@ -8,7 +8,7 @@ st.title('I have to get this right')
 
 @st.cache_data
 def load_data():
-   return pd.read_csv('dummy_data.csv')
+   return pd.read_csv('random_data.csv')
 
 def show_data(data):
    st.subheader('Filtering maybe?')
