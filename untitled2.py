@@ -43,9 +43,28 @@ def show_data_loc(data):
 
    return filtered_df
 
-show_data_loc(yay)
+filtered_yay = show_data_loc(yay)
 
 filtered_yay = show_data_loc(yay)
+
+# Some examples of what you can now do with it:
+
+# Summary statistics of filtered data
+st.subheader("Summary Statistics")
+st.write(filtered_yay.describe())
+
+# Plot only the filtered data
+st.subheader("Chart of Filtered Data")
+st.bar_chart(filtered_yay['some_column'])
+
+# Show filtered row count
+st.write(f"You have {len(filtered_yay)} rows after filtering")
+
+# Use it in further calculations
+st.write(filtered_yay['some_numeric_column'].mean())
+
+# Further filter it again
+double_filtered = filtered_yay[filtered_yay['another_column'] == 'some_value']
 
 
 
