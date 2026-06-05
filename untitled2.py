@@ -16,7 +16,7 @@ def show_data(data):
    filtered_df = data.copy()
 
    for col in data.columns:
-      if data[col].dtype == 'object': 
+      if str(data[col].dtype) == 'object': 
          options = data[col].dropna().unique().tolist()
          selected = st.multiselect(f"filtered by {col}", options, default = options)
          filtered_df = filtered_df[filtered_df[col].isin(selected)]
