@@ -103,6 +103,10 @@ with col2:
     if text_input:
         st.write("You entered: ", text_input)
 
+import streamlit as st
+
+st.link_button("Go to gallery", "https://streamlit.io/gallery")
+
 
 
 
