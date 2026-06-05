@@ -42,6 +42,10 @@ def show_data_loc(data):
 
 show_data_loc(yay)
 
+filtered_yay = show_data_loc(yay)
+
+st.write(filtered_yay.describe())  
+
 
 st.markdown("Going to try and make the tables selectable but caching seems to work, with csv files i dont see why it shouldnt work with the code") 
 
