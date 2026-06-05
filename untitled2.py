@@ -49,7 +49,7 @@ def show_data_loc(data):
 show_data_loc(yay)
 
 filtered_yay = show_data_loc(yay)
-st.write(filtered_yay.describe())
+
 
 
 
