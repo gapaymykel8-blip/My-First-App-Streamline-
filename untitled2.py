@@ -17,9 +17,9 @@ def show_data(data):
 
    for col in data.columns:
       if data[col].dtype == 'object': 
-         options = data[col].dropna.unique().tolist()
+         options = data[col].dropna.()unique().tolist()
          selected = st.multiselect(f"filtered by {col}", options, default = options)
-         filtered_df = filtered_df[filteried_df[col].isin(selected)]
+         filtered_df = filtered_df[filtered_df[col].isin(selected)]
 
    st.write(f"Showing {len(filtered_df)} of {len(data)} rows")
    st.dataframe(filtered_df) 
