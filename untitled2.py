@@ -6,7 +6,12 @@ import time
 
 st.title('I have to get this right')
 
-df = pd.read_csv('cumulative_2026.06.04_02.53.36.csv', sep=None, engine='python')
+df = pd.read_csv(
+    'cumulative_2026.06.04_02.53.36.csv',
+    sep=None,
+    engine='python',
+    on_bad_lines='skip'
+)
 
 @st.cache_data
 def show_data(data):
