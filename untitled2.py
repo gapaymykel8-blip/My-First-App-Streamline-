@@ -27,6 +27,19 @@ def show_data(data):
 yay = load_data()
 show_data(yay)
 
+st.markdown("Doing the same but for a specific Column Instead lets choose, Locaton") 
+def show_data_loc(data):
+   st.subheader('Filtering maybe?')
+
+   filtered_df = data.copy()
+
+   location_options = data[Locations].unique().tolist()
+   selected_locations = st.multiselect(f"filtered by {col}", location_options, default = location_options)
+   filtered_df = filtered_df[filtered_df[location_options].isin(selected_locations)]
+
+   st.write(f"Showing {len(filtered_df)} of {len(data)} rows")
+   st.dataframe(filtered_df) 
+
 
 st.markdown("Going to try and make the tables selectable but caching seems to work, with csv files i dont see why it shouldnt work with the code") 
 
