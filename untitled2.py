@@ -47,19 +47,29 @@ filtered_yay = show_data_loc(yay)
 
 # Some examples of what you can now do with it:
 
-# Summary statistics of filtered data
-st.subheader("Summary Statistics")
-st.write(filtered_yay.describe())
+# # Summary statistics of filtered data
+# st.subheader("Summary Statistics")
+# st.write(filtered_yay.describe())
 
-# Plot only the filtered data
-st.subheader("Chart of Filtered Data")
-st.bar_chart(filtered_yay['Voltage'])
+# # Plot only the filtered data
+# st.subheader("Chart of Filtered Data")
+# st.bar_chart(filtered_yay['Voltage'])
 
-# Show filtered row count
-st.write(f"You have {len(filtered_yay)} rows after filtering")
+# # Show filtered row count
+# st.write(f"You have {len(filtered_yay)} rows after filtering")
 
-# Use it in further calculations
-st.write(filtered_yay['Current'].mean())
+# # Use it in further calculations
+# st.write(filtered_yay['Current'].mean())
+
+import datetime
+import streamlit as st
+
+event_time = st.datetime_input(
+    "Schedule your event",
+    datetime.datetime(2025, 11, 19, 16, 45),
+)
+st.write("Event scheduled for", event_time)
+
 
 
 
