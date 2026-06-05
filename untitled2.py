@@ -34,7 +34,7 @@ def show_data_loc(data):
    filtered_df = data.copy()
 
    location_options = data['Location'].unique().tolist()
-   selected_locations = st.multiselect(f"filtered by {Location}", location_options, default = location_options)
+   selected_locations = st.multiselect(f"filtered by", location_options, default = location_options)
    filtered_df = filtered_df[filtered_df['Location'].isin(selected_locations)]
 
    st.write(f"Showing {len(filtered_df)} of {len(data)} rows")
