@@ -53,16 +53,14 @@ st.write(filtered_yay.describe())
 
 # Plot only the filtered data
 st.subheader("Chart of Filtered Data")
-st.bar_chart(filtered_yay['some_column'])
+st.bar_chart(filtered_yay['Voltage'])
 
 # Show filtered row count
 st.write(f"You have {len(filtered_yay)} rows after filtering")
 
 # Use it in further calculations
-st.write(filtered_yay['some_numeric_column'].mean())
+st.write(filtered_yay['Current'].mean())
 
-# Further filter it again
-double_filtered = filtered_yay[filtered_yay['another_column'] == 'some_value']
 
 
 
