@@ -6,17 +6,27 @@ import time
 
 st.title('I have to get this right')
 
-df = pd.read_csv(
-   dummy_data.csv
-)
-
 @st.cache_data
-def show_data(data):
-    st.header("Data analysis")
-    st.write("And here is the raw data:")
-    st.dataframe(data)
+def load_data():
+   return df = pd.read_csv('dummy_data.csv')
 
-yay = show_data(df)
+def show_data(data):
+   st.subheader('Filtering maybe?')
+
+   filtered_df = data.copy()
+
+   for col in data.columns:
+      if data[col].dtype == 'object': 
+         options = data[col].dropna.unique().tolist()
+         selected = st.multiselect(f"filtered by {col}", options, default = options)
+         filtered_df = filtered_df[filteried_df[col].isin(selected)]
+
+   st.write(f"Showing {len(filtered_df)} of {len(data)} rows")
+   st.dataframe(filtered_df) 
+
+yay = load_data()
+show_data(yay)
+
 
 st.markdown("Going to try and make the tables selectable but caching seems to work, with csv files i dont see why it shouldnt work with the code") 
 
