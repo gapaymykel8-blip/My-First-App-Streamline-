@@ -40,6 +40,8 @@ def show_data_loc(data):
    st.write(f"Showing {len(filtered_df)} of {len(data)} rows")
    st.dataframe(filtered_df) 
 
+show_data_loc(yay)
+
 
 st.markdown("Going to try and make the tables selectable but caching seems to work, with csv files i dont see why it shouldnt work with the code") 
 
