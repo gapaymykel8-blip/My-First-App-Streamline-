@@ -6,6 +6,16 @@ import time
 
 st.title('I have to get this right')
 
+
+
+with st.sidebar:
+    with st.echo():
+        st.write("This code will be printed to the sidebar.")
+
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
+
 @st.cache_data
 def load_data():
    return pd.read_csv('random_data1.csv')
